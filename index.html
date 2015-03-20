@@ -127,6 +127,7 @@
         <h2>Tools</h2>
         <ul>
             <li>THREE.js</li>
+            <li>Python</li>
         </ul>
     </div></section>
     <section class="slide"><div>
@@ -145,7 +146,8 @@
         <h2>Tools</h2>
         <ul>
             <li>THREE.js</li>
-            <li>GDAL, QGIS</li>
+            <li>Python</li>
+            <li>QGIS, PostGIS, GDAL</li>
         </ul>
     </div></section>
     <section class="slide cover"><div>
@@ -155,18 +157,45 @@
     <section class="slide"><div>
         <h2>Loading in data</h2>
         <code>var hMap = [[14.298, 51.050, 475.0], [14.293, 51.041, 391.0]....];</code></br>
+        <code></code></br>
         <code>for ( vertex in vertices ) {</code></br>
         <code>&nbsp;&nbsp;var h = hMap[row][col];</code></br>
         <code>&nbsp;&nbsp;vertex.z += h;</code></br>
     </div></section>
     <section class="slide"><div>
-        <h2>3D globe</h2>
+        <h2>Abstracting</h2>
+        <ul>
+            <li>Idea to create library</li>
+            <li>Drawing region in 3D, quite a lot of effort</li>
+            <li><code>new Terra( 'usa' )</code></li>
+        </ul>
+		<img class="small-top" src="pictures/terra1.jpg" alt="">
     </div></section>
     <section class="slide"><div>
-        <h2>Tools</h2>
+        <h2>Enter the GPU</h2>
+        <ul>
+            <li>JavaScript just too slow for processing huge data</li>
+            <li>GPU will render anyway, so why not process there too?</li>
+            <li>No longer thinking in JSON, but textures</li>
+        </ul>
+		<img class="small" src="pictures/srtm.jpg" alt="">
+    </div></section>
+    <section class="slide"><div>
+        <h2>Modifying geometry on the GPU</h2>
+        <code>vec3 p = position;</code></br>
+        <code>vec2 textureCoord = positionToTexture( position );</code></br>
+        <code>p.z = texture2D( uElevation, textureCoord );</code></br>
+        <code>gl_Position = projectionMatrix * viewMatrix *</code></br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vec4( p, 1.0 );</code></br>
     </div></section>
     <section class="slide"><div>
         <h2>Require.js &amp; THREE.js</h2>
+        <ul>
+            <li>One big <code>JS</code> just not scalable</li>
+            <li>Decided to go with Require.js to modularize code</li>
+            <li>Created example project for easy prototyping</li>
+        </ul>
+        <p><a href="https://github.com/felixpalmer/amd-three.js">https://github.com/felixpalmer/amd-three.js</a></p>
     </div></section>
     <section class="slide"><div>
         <h2>Blogging (webgl tombstone)</h2>
