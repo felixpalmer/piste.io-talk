@@ -34,6 +34,13 @@
             color:#FFF;
             font-size:70px;
         }
+        img.right {
+            height:100%;
+            top:0;
+            left:auto;
+            right:0;
+            position:absolute;
+        }
         .tiny {
               position: absolute;
               right: 2%;
@@ -85,6 +92,14 @@
               height: 94%;
               width: 96%;
           }
+          #Data h2, #Data li {
+              color:#FFF;
+          }
+          #Data p.note {
+              margin:0;
+              font-size:14pt;
+          }
+        
     </style>
 </head>
 <body class="list">
@@ -157,7 +172,6 @@
     <section class="slide"><div>
         <h2>Loading in data</h2>
         <code>var hMap = [[14.298, 51.050, 475.0], [14.293, 51.041, 391.0]....];</code></br>
-        <code></code></br>
         <code>for ( vertex in vertices ) {</code></br>
         <code>&nbsp;&nbsp;var h = hMap[row][col];</code></br>
         <code>&nbsp;&nbsp;vertex.z += h;</code></br>
@@ -191,28 +205,78 @@
     <section class="slide"><div>
         <h2>Require.js &amp; THREE.js</h2>
         <ul>
-            <li>One big <code>JS</code> just not scalable</li>
+            <li>One big <code>JS</code> file just not scalable (surprise!)</li>
             <li>Decided to go with Require.js to modularize code</li>
             <li>Created example project for easy prototyping</li>
         </ul>
         <p><a href="https://github.com/felixpalmer/amd-three.js">https://github.com/felixpalmer/amd-three.js</a></p>
     </div></section>
     <section class="slide"><div>
-        <h2>Blogging (webgl tombstone)</h2>
+        <h2>There's no debugger on the GPU!</h2>
+        <ul>
+            <li>State of WebGL tooling poor, relative to JavaScript</li>
+            <li>Development really painful, typo takes 10 seconds to surface</li>
+            <li>Solution: command line tool for validating GLSL</li>
+        </ul>
+        <p><a href="https://github.com/felixpalmer/glsl-validator">https://github.com/felixpalmer/glsl-validator</a></p>
     </div></section>
     <section class="slide"><div>
-        <h2>Learning from others</h2>
+        <h2>OSS &amp; blogging</h2>
+        <ul>
+            <li>Great way to focus on a specific problem</li>
+            <li>Feedback useful to improve code/design</li>
+            <li>Motivation, when working on a unreleased project</li>
+        </ul>
     </div></section>
+	<section class="slide cover"><div>
+		<h2>Example: LOD terrain</h2>
+		<img src="pictures/lod-terrain.jpg" alt="">
+	</div></section>
     <section class="slide"><div>
-        <h2>Parameter driven development</h2>
+        <h2>Drawing inspiration</h2>
+        <ul>
+            <li>Demo scene been doing crazy stuff with graphics a long time</li>
+            <li><a href="https://www.shadertoy.com">Shadertoy</a> great place for exploring and learning</li>
+        </ul>
     </div></section>
     <section class="slide"><div>
         <h2>Innovating by elimination</h2>
         <ul>
             <li>As an individual, lack resources to compete against incumbents</li>
-            <li>Better to be innovative, but possibly useless, than useful, but already done</li>
+            <li>Look at what is being done and avoid duplicating it</li>
             <li>Embrace restrictions</li>
+            <li>Better to have something innovative, but possibly useless, than useful, but already done</li>
         </ul>
+    </div></section>
+    <section class="slide cover"><div>
+        <h2>No imagery? No problem</h2>
+        <ul>
+            <li>Do not use HD satellite photography</li>
+            <li>Instead, generate terrains based on knowledge of locations</li>
+        </ul>
+		<img src="pictures/terra2.jpg" alt="">
+    </div></section>
+	<section class="slide cover" id="Data"><div>
+		<h2>Data sources</h2>
+		<ul>
+			<li>Satellite imagery</li>
+			<li>Elevation data</li>
+			<li>Land cover data</li>
+		</ul>
+        <img class="right" src="pictures/data_sources.png" alt="">
+        <p class="note">Data courtesy of:</p>
+        <p class="note">NASA / ESA (GLOBCOVER)</p>
+	</div></section>
+    <section class="slide"><div>
+        <h2>Giving up on the framework</h2>
+        <ul>
+            <li>Great for learning, but just too broad</li>
+            <li>Lack of good data to make things work</li>
+            <li>Unclear if any use cases, except...</li>
+        </ul>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Parameter driven development</h2>
     </div></section>
     <section class="slide"><div>
         <h2>Transitioning to a product</h2>
