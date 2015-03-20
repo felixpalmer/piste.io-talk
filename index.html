@@ -26,11 +26,65 @@
         .cover img {
             width: 100%;
         }
+        .cover {
+            color:#FFF;
+        }
         .cover h2 {
             margin:-30px 0 0;
             color:#FFF;
             font-size:70px;
         }
+        .tiny {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 200px;
+              width: 200px;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .tiny-top {
+              position: absolute;
+              right: 2%;
+              top: 3%;
+              height: 200px;
+              width: 200px;
+              box-shadow: 2px 2px 10px black;
+          }
+          .small {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 40%;
+              width: 40%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .small-top {
+              position: absolute;
+              right: 2%;
+              top: 3%;
+              height: 40%;
+              width: 40%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .medium {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 50%;
+              width: 96%;
+              box-shadow: 2px 2px 10px black;
+          }
+
+          .tiny:hover, .tiny-top:hover, .small-top:hover, .small:hover, .medium:hover {
+              position: absolute;
+              right: 2%;
+              bottom: 3%;
+              height: 94%;
+              width: 96%;
+          }
     </style>
 </head>
 <body class="list">
@@ -51,8 +105,52 @@
 		<h2>What is this?</h2>
 		<img src="pictures/matterhorn2.jpg" alt="">
 	</div></section>
+	<section class="slide"><div>
+		<h2>Overview</h2>
+        <ul>
+            <li>From trains to mountains</li>
+            <li>Building your own tools</li>
+            <li>Blogging to learn and solve problems</li>
+            <li>Drawing inspiration (shadertoy)</li>
+        </ul>
+	</div></section>
+    <section class="slide cover"><div>
+        <h2>Starting with trains</h2>
+        <ul>
+            <li>Mine data from API</li>
+            <li>Create 3D scene to explore</li>
+            <li>No underlying geographic data</li>
+        </ul>
+		<img src="pictures/vlaky1b.jpg" alt="">
+    </div></section>
     <section class="slide"><div>
-        <h2>Trains</h2>
+        <h2>Tools</h2>
+        <ul>
+            <li>THREE.js</li>
+        </ul>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Geo-data</h2>
+        <a href="http://www.naturalearthdata.com/">http://www.naturalearthdata.com/</a>
+        <ul>
+            <li>Lots of nice global data sets</li>
+            <li>Satellite imagery</li>
+            <li>Elevation data</li>
+            <li>Town boundaries</li>
+            <li>Rivers, roads, etc</li>
+        </ul>
+		<img class="small-top" src="pictures/nat_earth.jpg" alt="">
+    </div></section>
+    <section class="slide"><div>
+        <h2>Tools</h2>
+        <ul>
+            <li>THREE.js</li>
+            <li>GDAL, QGIS</li>
+        </ul>
+    </div></section>
+    <section class="slide cover"><div>
+        <h2>Geo-data</h2>
+		<img src="pictures/vlaky2.jpg" alt="">
     </div></section>
     <section class="slide"><div>
         <h2>Loading in data</h2>
@@ -68,7 +166,7 @@
         <h2>Tools</h2>
     </div></section>
     <section class="slide"><div>
-        <h2>Require.js & THREE.js</h2>
+        <h2>Require.js &amp; THREE.js</h2>
     </div></section>
     <section class="slide"><div>
         <h2>Blogging (webgl tombstone)</h2>
@@ -80,6 +178,14 @@
         <h2>Parameter driven development</h2>
     </div></section>
     <section class="slide"><div>
+        <h2>Innovating by elimination</h2>
+        <ul>
+            <li>As an individual, lack resources to compete against incumbents</li>
+            <li>Better to be innovative, but possibly useless, than useful, but already done</li>
+            <li>Embrace restrictions</li>
+        </ul>
+    </div></section>
+    <section class="slide"><div>
         <h2>Transitioning to a product</h2>
     </div></section>
     <section class="slide"><div>
@@ -87,6 +193,9 @@
     </div></section>
     <section class="slide"><div>
         <h2>React.js</h2>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Bribing on Stack-Overflow</h2>
     </div></section>
 
 	<script src="shower/shower.min.js"></script>
