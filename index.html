@@ -88,6 +88,13 @@
               box-shadow: 2px 2px 10px black;
           }
 
+          .bottom {
+              position: absolute;
+              left: 0%;
+              top: 65%;
+              width: 100%;
+          }
+
           .tiny:hover, .tiny-top:hover, .small-top:hover, .small:hover, .medium:hover {
               position: absolute;
               right: 2%;
@@ -215,8 +222,9 @@
         <ul>
             <li>Idea to create library</li>
             <li>Drawing region in 3D, quite a lot of effort</li>
-            <li><code>new Terra( 'usa' )</code></li>
+            <li>Abstract from user</li>
         </ul>
+        <code>var usa = new Terra( 'usa' )</code>
 		<img class="small-top" src="pictures/terra1.jpg" alt="">
     </div></section>
     <section class="slide"><div>
@@ -236,6 +244,10 @@
         <code>gl_Position = projectionMatrix * viewMatrix *</code></br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vec4( p, 1.0 );</code></br>
     </div></section>
+    <section class="slide shout cover"><div>
+        <h2>DEMO</h2>
+		<img src="pictures/demo2.jpg" alt="">
+    </div></section>
     <section class="slide"><div>
         <h2>Push as much onto GPU</h2>
         <ul>
@@ -254,6 +266,34 @@
         </ul>
         <p><a href="https://github.com/felixpalmer/amd-three.js">https://github.com/felixpalmer/amd-three.js</a></p>
     </div></section>
+	<section class="slide"><div>
+		<h2>Require.js module</h2>
+        <code>define( ["geometry","material","renderer","scene"],</code></br>
+        <code>&nbsp;&nbsp;function ( geom, mat, renderer, scene ) {</code></br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;var app = {</code></br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;init: function () {</code></br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.mesh = new THREE.Mesh(geom.box, mat.ice);</code></br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.mesh.position.x = 20;</code></br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scene.add( app.mesh );</code></br>
+        <code>...</code></br>
+	</div></section>
+    <section class="slide"><div>
+        <h2>Tools</h2>
+        <ul>
+            <li>Frontend</li>
+            <ul>
+                <li>THREE.js, JavaScript, <strong>Require.js, WebGL</strong></li>
+            </ul>
+            <li>Data processing</li>
+            <ul>
+                <li>Python, QGIS, GDAL</li>
+            </ul>
+            <li>Backend</li>
+            <ul>
+                <li><strong>Go (web server), PostGIS, Postgres</strong></li>
+            </ul>
+        </ul>
+    </div></section>
     <section class="slide"><div>
         <h2>There's no debugger on the GPU!</h2>
         <ul>
@@ -271,34 +311,10 @@
             <li>Motivation, when working on a unreleased project</li>
         </ul>
     </div></section>
-    <section class="slide"><div>
-        <h2>Tools</h2>
-        <ul>
-            <li>Frontend</li>
-            <ul>
-                <li>THREE.js, JavaScript</li>
-            </ul>
-            <li>Data processing</li>
-            <ul>
-                <li>Python, QGIS, GDAL</li>
-            </ul>
-            <li>Backend</li>
-            <ul>
-                <li<strong>PostGIS, Postgres</strong></li>
-            </ul>
-        </ul>
-    </div></section>
-	<section class="slide cover"><div>
-		<h2>Example: LOD terrain</h2>
+	<section class="slide cover shout"><div>
+		<h2>LOD terrain</h2>
 		<img src="pictures/lod-terrain.jpg" alt="">
 	</div></section>
-    <section class="slide"><div>
-        <h2>Drawing inspiration</h2>
-        <ul>
-            <li>Demo scene been doing crazy stuff with graphics a long time</li>
-            <li><a href="https://www.shadertoy.com">Shadertoy</a> great place for exploring and learning</li>
-        </ul>
-    </div></section>
     <section class="slide"><div>
         <h2>Innovating by elimination</h2>
         <ul>
@@ -344,6 +360,10 @@
         </ul>
 		<img src="pictures/la-plagne3.jpg" alt="">
     </div></section>
+    <section class="slide shout cover"><div>
+        <h2 class="dark">DEMO</h2>
+		<img src="pictures/demo3.jpg" alt="">
+    </div></section>
     <section class="slide"><div>
         <h2>Experimentation</h2>
         <ul>
@@ -358,26 +378,55 @@
         <ul>
             <li>Adding pistes</li>
             <li>Simplify camera controls</li>
-            <li>Build chrome around engine</li>
+            <li>Build chrome around engine (React.js)</li>
         </ul>
 		<img class="small" src="pictures/piste.jpg" alt="">
+    </div></section>
+    <section class="slide"><div>
+        <h2>Tools</h2>
+        <ul>
+            <li>Frontend</li>
+            <ul>
+                <li>THREE.js, JavaScript, Require.js, WebGL, <strong>DAT GUI, React.js</strong></li>
+            </ul>
+            <li>Data processing</li>
+            <ul>
+                <li>Python, QGIS, GDAL</li>
+            </ul>
+            <li>Backend</li>
+            <ul>
+                <li><strong>what backend?</strong></li>
+            </ul>
+        </ul>
     </div></section>
     <section class="slide"><div>
         <h2>JavaScript is pretty fast</h2>
         <ul>
             <li>How to display labels?</li>
             <li>Need to raycast through terrain</li>
-            <li>Efficiently handling DOM interactions? React.js</li>
+            <li>Efficiently handling DOM interactions using React.js</li>
         </ul>
+        <img class="bottom" src="pictures/piste3.jpg" alt="">
     </div></section>
     <section class="slide"><div>
         <h2>Scaling</h2>
         <ul>
-            <li>All work done on client</li>
-            <li>Entire site is just static files</li>
-            <li>Scalabilty more or less comes for free</li>
-            <li>Just need to host on scalable platform, e.g. S3</li>
+            <li>All work done on client, entire site is just static files</li>
+            <li>Automate all data processing, do not want to do manual data entry!</li>
+            <li>Scalabilty more or less comes for free, just need to host on scalable platform, e.g. S3</li>
+            <li>Leverage cloud for computation</li>
         </ul>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Launching</h2>
+        <ul>
+            <li>Many, many bugs!</li>
+            <li>Device/OS/browser specific quirks</li>
+            <li>Terrible load time</li>
+            <li>UX issues (3D is hard)</li>
+            <li>Bit by bit, fix and improve</li>
+        </ul>
+        <img class="right" src="pictures/ipad.jpg" alt="">
     </div></section>
     <section class="slide cover"><div>
         <h2>Takeaways</h2>
