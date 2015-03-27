@@ -141,28 +141,51 @@
     <section class="slide"><div>
         <h2>Tools</h2>
         <ul>
-            <li>THREE.js</li>
-            <li>Python</li>
+            <li>Frontend</li>
+            <ul>
+                <li>THREE.js, JavaScript</li>
+            </ul>
+            <li>Data processing</li>
+            <ul>
+                <li>Python</li>
+            </ul>
         </ul>
+    </div></section>
+    <section class="slide shout"><div>
+        <h2>DEMO</h2>
     </div></section>
     <section class="slide"><div>
         <h2>Geo-data</h2>
-        <a href="http://www.naturalearthdata.com/">http://www.naturalearthdata.com/</a>
         <ul>
-            <li>Lots of nice global data sets</li>
-            <li>Satellite imagery</li>
-            <li>Elevation data</li>
-            <li>Town boundaries</li>
-            <li>Rivers, roads, etc</li>
+            <li>Both raster...</li>
+            <ul>
+                <li>Satellite imagery</li>
+                <li>Elevation data</li>
+            </ul>
+            <li>...and vector</li>
+            <ul>
+                <li>Town boundaries</li>
+                <li>Rivers, roads, etc</li>
+            </ul>
         </ul>
 		<img class="small-top" src="pictures/nat_earth.jpg" alt="">
+        <p class="note">Lots of nice global data sets: <a href="http://www.naturalearthdata.com/">http://www.naturalearthdata.com/</a></p>
     </div></section>
     <section class="slide"><div>
         <h2>Tools</h2>
         <ul>
-            <li>THREE.js</li>
-            <li>Python</li>
-            <li>QGIS, PostGIS, GDAL</li>
+            <li>Frontend</li>
+            <ul>
+                <li>THREE.js, JavaScript</li>
+            </ul>
+            <li>Data processing</li>
+            <ul>
+                <li>Python, <strong>QGIS, GDAL</strong></li>
+            </ul>
+            <li>Backend</li>
+            <ul>
+                <li<strong>PostGIS, Postgres</strong></li>
+            </ul>
         </ul>
     </div></section>
     <section class="slide cover"><div>
@@ -186,7 +209,7 @@
 		<img class="small-top" src="pictures/terra1.jpg" alt="">
     </div></section>
     <section class="slide"><div>
-        <h2>Enter the GPU</h2>
+        <h2>JavaScript is pretty slow</h2>
         <ul>
             <li>JavaScript just too slow for processing huge data</li>
             <li>GPU will render anyway, so why not process there too?</li>
@@ -201,6 +224,15 @@
         <code>p.z = texture2D( uElevation, textureCoord );</code></br>
         <code>gl_Position = projectionMatrix * viewMatrix *</code></br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vec4( p, 1.0 );</code></br>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Push as much onto GPU</h2>
+        <ul>
+            <li>General approach: push as much as possible onto GPU</li>
+            <li>CPU speeds pretty much stalled, GPUs improving all the time</li>
+            <li>Bet on a future where the GPU is your most powerful processor</li>
+        </ul>
+		<img class="small" src="pictures/srtm.jpg" alt="">
     </div></section>
     <section class="slide"><div>
         <h2>Require.js &amp; THREE.js</h2>
@@ -226,6 +258,23 @@
             <li>Great way to focus on a specific problem</li>
             <li>Feedback useful to improve code/design</li>
             <li>Motivation, when working on a unreleased project</li>
+        </ul>
+    </div></section>
+    <section class="slide"><div>
+        <h2>Tools</h2>
+        <ul>
+            <li>Frontend</li>
+            <ul>
+                <li>THREE.js, JavaScript</li>
+            </ul>
+            <li>Data processing</li>
+            <ul>
+                <li>Python, QGIS, GDAL</li>
+            </ul>
+            <li>Backend</li>
+            <ul>
+                <li<strong>PostGIS, Postgres</strong></li>
+            </ul>
         </ul>
     </div></section>
 	<section class="slide cover"><div>
@@ -301,6 +350,14 @@
             <li>Build chrome around engine</li>
         </ul>
 		<img class="small" src="pictures/piste.jpg" alt="">
+    </div></section>
+    <section class="slide"><div>
+        <h2>JavaScript is pretty fast</h2>
+        <ul>
+            <li>How to display labels?</li>
+            <li>Need to raycast through terrain</li>
+            <li>Efficiently handling DOM interactions? React.js</li>
+        </ul>
     </div></section>
     <section class="slide"><div>
         <h2>Scaling</h2>
