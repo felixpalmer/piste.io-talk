@@ -95,6 +95,12 @@
               width: 100%;
           }
 
+          .definition {
+              position: absolute;
+              right: 10%;
+              bottom: 0%;
+          }
+
           .tiny:hover, .tiny-top:hover, .small-top:hover, .small:hover, .medium:hover {
               position: absolute;
               right: 2%;
@@ -140,6 +146,7 @@
 	<section class="slide cover"><div>
 		<h2>Project : piste.io</h2>
 		<img src="pictures/matterhorn2.jpg" alt="">
+        <p class="definition">Piste (noun). A ski trail.</p>
 	</div></section>
 	<!--section class="slide"><div>
 		<h2>Overview</h2>
@@ -149,7 +156,7 @@
             <li>Lessons learned on the way</li>
         </ul>
 	</div></section-->
-    <section class="slide cover"><div>
+    <!--section class="slide cover"><div>
         <h2>Starting with trains</h2>
         <ul>
             <li>Mine data from API</li>
@@ -225,7 +232,7 @@
         </ul>
         <code>var usa = new Terra( 'usa' )</code>
 		<img class="small-top" src="pictures/terra1.jpg" alt="">
-    </div></section>
+    </div></section-->
     <section class="slide"><div>
         <h2>JavaScript is pretty slow</h2>
         <ul>
@@ -243,10 +250,10 @@
         <code>gl_Position = projectionMatrix * viewMatrix *</code></br>
         <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vec4( p, 1.0 );</code></br>
     </div></section>
-    <section class="slide shout cover"><div>
+    <!--section class="slide shout cover"><div>
         <h2>DEMO</h2>
 		<img src="pictures/demo2.jpg" alt="">
-    </div></section>
+    </div></section-->
     <section class="slide"><div>
         <h2>Push as much onto GPU</h2>
         <ul>
@@ -256,10 +263,10 @@
         </ul>
 		<img class="small" src="pictures/srtm.jpg" alt="">
     </div></section>
-    <section class="slide"><div>
+    <!--section class="slide"><div>
         <h2>Require.js &amp; THREE.js</h2>
         <ul>
-            <li>One big <code>JS</code> file just not scalable (surprise!)</li>
+            <li>One big JavaScript file just not scalable (surprise!)</li>
             <li>Decided to go with Require.js to modularize code</li>
             <li>Created example project for easy prototyping</li>
         </ul>
@@ -292,7 +299,7 @@
                 <li><strong>Go (web server), PostGIS, Postgres</strong></li>
             </ul>
         </ul>
-    </div></section>
+    </div></section-->
     <section class="slide"><div>
         <h2>There's no debugger on the GPU!</h2>
         <ul>
@@ -306,8 +313,10 @@
         <h2>OSS &amp; blogging</h2>
         <ul>
             <li>Great way to focus on a specific problem</li>
+            <li>Forces you to write it well!</li>
             <li>Feedback useful to improve code/design</li>
             <li>Motivation, when working on a unreleased project</li>
+            <li>Great way to meet people in the field</li>
         </ul>
     </div></section>
 	<section class="slide cover shout"><div>
@@ -320,10 +329,11 @@
             <li>As an individual, lack resources to compete against incumbents</li>
             <li>Look at what is being done and avoid duplicating it</li>
             <li>Embrace restrictions</li>
-            <li>Better to have something innovative, but possibly useless, than useful, but already done</li>
+            <li>Better to do something innovative, but possibly useless, than something useful, but already done</li>
+            <li>Play to own strengths</li>
         </ul>
     </div></section>
-    <section class="slide cover"><div>
+    <!--section class="slide cover"><div>
         <h2>No imagery? No problem</h2>
         <ul>
             <li>Do not use HD satellite photography</li>
@@ -349,7 +359,7 @@
             <li>Lack of good data to make things work</li>
             <li>Unclear if any use cases, except...</li>
         </ul>
-    </div></section>
+    </div></section-->
     <section class="slide cover"><div>
         <h2>3D piste map</h2>
         <ul>
@@ -359,10 +369,10 @@
         </ul>
 		<img src="pictures/la-plagne3.jpg" alt="">
     </div></section>
-    <section class="slide shout cover"><div>
+    <!--section class="slide shout cover"><div>
         <h2 class="dark">DEMO</h2>
 		<img src="pictures/demo3.jpg" alt="">
-    </div></section>
+    </div></section-->
     <section class="slide"><div>
         <h2>Experimentation</h2>
         <ul>
@@ -381,24 +391,7 @@
         </ul>
 		<img class="small" src="pictures/piste.jpg" alt="">
     </div></section>
-    <section class="slide"><div>
-        <h2>Tools</h2>
-        <ul>
-            <li>Frontend</li>
-            <ul>
-                <li>THREE.js, JavaScript, Require.js, WebGL, <strong>DAT GUI, React.js</strong></li>
-            </ul>
-            <li>Data processing</li>
-            <ul>
-                <li>Python, QGIS, GDAL</li>
-            </ul>
-            <li>Backend</li>
-            <ul>
-                <li><strong>what backend?</strong></li>
-            </ul>
-        </ul>
-    </div></section>
-    <section class="slide"><div>
+    <!--section class="slide"><div>
         <h2>JavaScript is pretty fast</h2>
         <ul>
             <li>How to display labels?</li>
@@ -406,7 +399,7 @@
             <li>Efficiently handling DOM interactions using React.js</li>
         </ul>
         <img class="bottom" src="pictures/piste3.jpg" alt="">
-    </div></section>
+    </div></section-->
     <section class="slide"><div>
         <h2>Scaling</h2>
         <ul>
@@ -445,6 +438,23 @@
         <p>Slides: <a href="http://felixpalmer.github.io/piste.io-talk">felixpalmer.github.io/piste.io-talk</a></p>
 		<img src="pictures/piste4.jpg" alt="">
 	</div></section>
+    <section class="slide"><div>
+        <h2>Tools</h2>
+        <ul>
+            <li>Frontend</li>
+            <ul>
+                <li>THREE.js, JavaScript, Require.js, WebGL, DAT GUI, React.js</li>
+            </ul>
+            <li>Data processing</li>
+            <ul>
+                <li>Python, QGIS, GDAL</li>
+            </ul>
+            <li>Backend</li>
+            <ul>
+                <li><strong>what backend?</strong></li>
+            </ul>
+        </ul>
+    </div></section>
 	<script src="shower/shower.min.js"></script>
 </body>
 </html>
