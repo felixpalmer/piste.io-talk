@@ -134,13 +134,7 @@
 		<img src="pictures/la-plagne.jpg" alt="">
 	</div></section>
 	<section class="slide cover"><div>
-		<h2>Goals</h2>
-        <ul>
-            <li>Online learning</li>
-            <li>Technical writing</li>
-            <li>Speaking at conferences</li>
-            <li>Meaningful side project</li>
-        </ul>
+		<h2>Meaningful side project</h2>
 		<img src="pictures/praha.jpg" alt="">
 	</div></section>
 	<section class="slide cover"><div>
@@ -152,83 +146,15 @@
 		<h2>Overview</h2>
         <ul>
             <li>Bit of history</li>
-            <li>Coming up with new ideas</li>
-            <li>Technical issues with the web platform</li>
-            <li>Getting unstuck</li>
             <li>Building the product</li>
+            <li>Coming up with new ideas</li>
+            <!--li>Power of the GPU</li-->
+            <li>Getting unstuck</li>
         </ul>
 	</div></section>
     <section class="slide shout cover"><div>
         <h2>A bit of history</h2>
     </div></section>
-    <section class="slide shout cover"><div>
-        <h2>Coming up with new ideas</h2>
-    </div></section>
-    <section class="slide"><div>
-        <h2>Innovating by elimination</h2>
-        <ul>
-            <li>As an individual, lack resources to compete against incumbents</li>
-            <li>Look at what is being done and avoid duplicating it</li>
-            <li>Embrace restrictions</li>
-            <li>Better to do something innovative, but possibly useless, than something useful, but already done</li>
-            <li>Play to own strengths</li>
-        </ul>
-    </div></section>
-    <section class="slide shout cover"><div>
-        <h2>Technical issues</h2>
-    </div></section>
-    <section class="slide"><div>
-        <h2>JavaScript is pretty slow</h2>
-        <ul>
-            <li>JavaScript just too slow for processing huge data</li>
-            <li>GPU will render anyway, so why not process there too?</li>
-            <li>No longer thinking in JSON, but textures</li>
-        </ul>
-		<img class="small" src="pictures/srtm.jpg" alt="">
-    </div></section>
-    <section class="slide"><div>
-        <h2>Modifying geometry on the GPU</h2>
-        <code>vec3 p = position;</code></br>
-        <code>vec2 textureCoord = positionToTexture( position );</code></br>
-        <code>p.z = texture2D( uElevation, textureCoord );</code></br>
-        <code>gl_Position = projectionMatrix * viewMatrix *</code></br>
-        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vec4( p, 1.0 );</code></br>
-    </div></section>
-    <section class="slide"><div>
-        <h2>Push as much onto GPU</h2>
-        <ul>
-            <li>General approach: push as much as possible onto GPU</li>
-            <li>CPU speeds pretty much stalled, GPUs improving all the time</li>
-            <li>Bet on a future where the GPU is your most powerful processor</li>
-        </ul>
-		<img class="small" src="pictures/srtm.jpg" alt="">
-    </div></section>
-    <section class="slide"><div>
-        <h2>There's no debugger on the GPU!</h2>
-        <ul>
-            <li>State of WebGL tooling poor, relative to JavaScript</li>
-            <li>Development really painful, typo takes 10 seconds to surface</li>
-            <li>Solution: command line tool for validating GLSL</li>
-        </ul>
-        <p><a href="https://github.com/felixpalmer/glsl-validator">https://github.com/felixpalmer/glsl-validator</a></p>
-    </div></section>
-    <section class="slide shout cover"><div>
-        <h2>Getting unstuck</h2>
-    </div></section>
-    <section class="slide"><div>
-        <h2>OSS &amp; blogging</h2>
-        <ul>
-            <li>Great way to focus on a specific problem</li>
-            <li>Forces you to write it well!</li>
-            <li>Feedback useful to improve code/design</li>
-            <li>Motivation, when working on a unreleased project</li>
-            <li>Great way to meet people in the field</li>
-        </ul>
-    </div></section>
-	<section class="slide cover shout"><div>
-		<h2>LOD terrain</h2>
-		<img src="pictures/lod-terrain.jpg" alt="">
-	</div></section>
     <section class="slide shout cover"><div>
         <h2>Building a product</h2>
     </div></section>
@@ -263,21 +189,38 @@
         <h2>Scaling</h2>
         <ul>
             <li>All work done on client, entire site is just static files</li>
-            <li>Automate all data processing, do not want to do manual data entry!</li>
-            <li>Scalabilty more or less comes for free, just need to host on scalable platform, e.g. S3</li>
+            <li>Scalability more or less comes for free, just need to host on scalable platform, e.g. S3</li>
             <li>Leverage cloud for computation</li>
         </ul>
     </div></section>
+    <section class="slide shout cover"><div>
+        <h2>Coming up with new ideas</h2>
+    </div></section>
     <section class="slide"><div>
-        <h2>Launching</h2>
+        <h2>"Innovating by avoidance"</h2>
         <ul>
-            <li>Many, many bugs!</li>
-            <li>Device/OS/browser specific quirks</li>
-            <li>Terrible load time</li>
-            <li>UX issues (3D is hard)</li>
-            <li>Bit by bit, fix and improve</li>
+            <li>Better to do something innovative, but possibly useless, than something useful, but already done</li>
+            <li>Look at what is being done and avoid duplicating it</li>
+            <li>Embrace restrictions</li>
+            <li>Play to own strengths</li>
         </ul>
-        <img class="right" src="pictures/ipad.jpg" alt="">
+    </div></section>
+    <section class="slide shout cover"><div>
+        <h2>Getting unstuck</h2>
+    </div></section>
+	<section class="slide cover shout"><div>
+		<h2>LOD terrain</h2>
+		<img src="pictures/lod-terrain.jpg" alt="">
+	</div></section>
+    <section class="slide"><div>
+        <h2>OSS &amp; blogging</h2>
+        <ul>
+            <li>Great way to focus on a specific problem</li>
+            <li>Forces you to write it well!</li>
+            <li>Feedback useful to improve code/design</li>
+            <li>Motivation, when working on a unreleased project</li>
+            <li>Great way to meet people in the field</li>
+        </ul>
     </div></section>
     <section class="slide cover"><div>
         <h2>Takeaways</h2>
@@ -314,6 +257,36 @@
             </ul>
         </ul>
     </div></section>
-	<script src="shower/shower.min.js"></script>
+	<section class="slide shout cover"><div>
+        <h2>Power of the GPU</h2>
+    </div></section>
+    <section class="slide"><div>
+        <h2>JavaScript is pretty slow</h2>
+        <ul>
+            <li>JavaScript just too slow for processing huge data</li>
+            <li>GPU will render anyway, so why not process there too?</li>
+            <li>No longer thinking in JSON, but textures</li>
+        </ul>
+		<img class="small" src="pictures/srtm.jpg" alt="">
+    </div></section>
+    <section class="slide"><div>
+        <h2>Use that GPU</h2>
+        <ul>
+            <li>General approach: push as much as possible onto GPU</li>
+            <li>CPU speeds pretty much stalled, GPUs improving all the time</li>
+            <li>Bet on a future where the GPU is your most powerful processor</li>
+        </ul>
+		<img class="small" src="pictures/srtm.jpg" alt="">
+    </div></section>
+    <section class="slide"><div>
+        <h2>There's no debugger on the GPU!</h2>
+        <ul>
+            <li>State of WebGL tooling poor, relative to JavaScript</li>
+            <li>Development really painful, typo takes 10 seconds to surface</li>
+            <li>Solution: command line tool for validating GLSL</li>
+        </ul>
+        <p><a href="https://github.com/felixpalmer/glsl-validator">https://github.com/felixpalmer/glsl-validator</a></p>
+    </div></section>
+    <script src="shower/shower.min.js"></script>
 </body>
 </html>
